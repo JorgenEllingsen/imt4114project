@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.23)  26 OCT 2016 11:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.23)  26 OCT 2016 12:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -319,36 +319,42 @@ LaTeX Font Info:    Try loading font information for U+lasy on input line 14.
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) (./introduction.tex)
-(./background.tex [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+(./background.tex) (./practicalapproach.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-])
-(./practicalapplication.tex) (./results.tex) (./discussion.tex)
-(./conclusion.tex)
+]) (./results.tex) (./discussion.tex) (./conclusion.tex)
 No file paper.bbl.
-Extra height:0.0pt when 599.37297pt
-(2)Left:599.37297pt Right:599.74596pt Output:599.37297pt
-(2)Left:599.74596pt Right:599.74596pt Output:599.74596pt
+
+Underfull \vbox (badness 2753) has occurred while \output is active []
+
+Extra height:10.0pt when 561.12297pt
+Extra height:0.0pt when 562.12297pt
+(2)Left:562.12297pt Right:562.74596pt Output:562.12297pt
+(2)Left:562.74596pt Right:562.74596pt Output:562.74596pt
 - LAST -
 Extra skip:0.0pt
-Left:599.74596pt
-Right:599.74596pt
-Output:599.74596pt
-[2] (./paper.aux) ) 
+Left:562.74596pt
+Right:562.74596pt
+Output:562.74596pt
+ [2]
+(./paper.aux) ) 
 Here is how much of TeX's memory you used:
  3334 strings out of 493029
- 42384 string characters out of 6136234
- 233932 words of memory out of 5000000
+ 42375 string characters out of 6136234
+ 231718 words of memory out of 5000000
  6773 multiletter control sequences out of 15000+600000
  40530 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,8n,35p,274b,217s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}<
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/times/utmb8a.pfb>
-Output written on paper.pdf (2 pages, 50647 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/times/utmb8a.pfb>
+Output written on paper.pdf (2 pages, 52641 bytes).
 PDF statistics:
  28 PDF objects out of 1000 (max. 8388607)
  19 compressed objects within 1 object stream
