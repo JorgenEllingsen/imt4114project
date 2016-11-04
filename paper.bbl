@@ -15,6 +15,12 @@ Anikeev M, Freiling FC, G{\"o}tzfried J, M{\"u}ller T.
   deallocated Java objects inside the Dalvik VM.
 \newblock Journal of Information Security and Applications. 2015;22:81--86.
 
+\bibitem{AndroidMemManagement}
+Google. Overview of Android Memory Management;.
+\newblock (Accessed on 4/11/2016.).
+\newblock
+  \url{https://developer.android.com/topic/performance/memory-overview.html}.
+
 \bibitem{Androulidakis2016}
 Androulidakis II.
 \newblock In: Mobile Phone Forensics. Cham: Springer International Publishing;

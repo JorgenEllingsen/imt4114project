@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.5)  4 NOV 2016 10:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.5)  4 NOV 2016 10:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -349,23 +349,23 @@ x/updmap/pdftex.map}
 
 ]) (./results.tex) (./discussion.tex [2 <./gc.png>])
 (./conclusion.tex) (./paper.bbl)
-Extra height:0.0pt when 383.84999pt
-(2)Left:383.84999pt Right:384.2pt Output:383.84999pt
-(2)Left:384.2pt Right:384.2pt Output:384.2pt
+Extra height:0.0pt when 400.09999pt
+(2)Left:400.09999pt Right:406.2pt Output:400.09999pt
+(2)Left:406.2pt Right:395.7pt Output:406.2pt
 - LAST -
 Extra skip:0.0pt
-Left:384.2pt
-Right:384.2pt
-Output:384.2pt
+Left:406.2pt
+Right:395.7pt
+Output:406.2pt
  [3] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
- 3350 strings out of 493089
- 42967 string characters out of 6134843
- 221315 words of memory out of 5000000
- 6727 multiletter control sequences out of 15000+600000
+ 3351 strings out of 493089
+ 42989 string characters out of 6134843
+ 222318 words of memory out of 5000000
+ 6728 multiletter control sequences out of 15000+600000
  44814 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,35p,989b,274s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,8n,35p,1028b,274s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r
 .enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.p
 fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
@@ -373,7 +373,7 @@ fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
 ocal/texlive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015
 /texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (3 pages, 287632 bytes).
+Output written on paper.pdf (3 pages, 287775 bytes).
 PDF statistics:
  42 PDF objects out of 1000 (max. 8388607)
  28 compressed objects within 1 object stream

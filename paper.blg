@@ -11,46 +11,49 @@ Warning--empty author and editor in idc
 Warning--missing publisher in idc
 Warning--empty booktitle in ARTGC
 Warning--empty pages in ARTGC
+Warning--empty author and editor in AndroidMemManagement
+Warning--missing publisher in AndroidMemManagement
+Warning--there's a month but no year in AndroidMemManagement
 Warning--empty chapter in Androulidakis2016
-You've used 4 entries,
+You've used 5 entries,
             3170 wiz_defined-function locations,
-            668 strings with 5159 characters,
-and the built_in function-call counts, 4869 in all, are:
-= -- 598
-> -- 36
+            674 strings with 5340 characters,
+and the built_in function-call counts, 5310 in all, are:
+= -- 646
+> -- 40
 < -- 1
-+ -- 19
-- -- 9
-* -- 384
-:= -- 550
-add.period$ -- 13
-call.type$ -- 4
-change.case$ -- 2
++ -- 21
+- -- 10
+* -- 407
+:= -- 607
+add.period$ -- 16
+call.type$ -- 5
+change.case$ -- 3
 chr.to.int$ -- 0
-cite$ -- 9
-duplicate$ -- 424
-empty$ -- 468
-format.name$ -- 11
-if$ -- 1144
+cite$ -- 13
+duplicate$ -- 461
+empty$ -- 511
+format.name$ -- 12
+if$ -- 1248
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 33
-newline$ -- 22
-num.names$ -- 4
-pop$ -- 79
+int.to.str$ -- 5
+missing$ -- 40
+newline$ -- 27
+num.names$ -- 5
+pop$ -- 96
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 74
+skip$ -- 90
 stack$ -- 0
-substring$ -- 818
-swap$ -- 79
+substring$ -- 851
+swap$ -- 92
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 5
-while$ -- 28
-width$ -- 5
-write$ -- 44
-(There were 5 warnings)
+warning$ -- 8
+while$ -- 32
+width$ -- 6
+write$ -- 55
+(There were 8 warnings)
