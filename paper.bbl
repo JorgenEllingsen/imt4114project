@@ -1,0 +1,24 @@
+\begin{thebibliography}{1}
+
+\bibitem{idc}
+IDC. Smartphone OS Market Share, 2016 Q2; 2016.
+\newblock \url{http://www.idc.com/prodserv/smartphone-os-market-share.jsp}.
+
+\bibitem{ARTGC}
+Carlstrom B, Ghuloum A, Rogers I.
+\newblock The ART runtime.
+\newblock Google I/O; 2014. .
+
+\bibitem{DALVIKGC}
+Anikeev M, Freiling FC, G{\"o}tzfried J, M{\"u}ller T.
+\newblock Secure garbage collection: Preventing malicious data harvesting from
+  deallocated Java objects inside the Dalvik VM.
+\newblock Journal of Information Security and Applications. 2015;22:81--86.
+
+\bibitem{Androulidakis2016}
+Androulidakis II.
+\newblock In: Mobile Phone Forensics. Cham: Springer International Publishing;
+  2016. p. 87--109.
+\newblock Available from: \url{http://dx.doi.org/10.1007/978-3-319-29742-2_6}.
+
+\end{thebibliography}
