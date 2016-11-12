@@ -14,8 +14,17 @@ To extract the memory AMExtract was chosen. %TODO: REF
  The tool was then compiled using the ndk-build tool. As part of the linux kernel headers has been modified, one of the types had to be redefined using an older header file.
 
 \subsubsection{Searching memory}
+The extracted memory was searched using the strings which was previously entered. For this purpose the 'strings' tool was used to extract continuous regions of ASCII text and 'grep' was used to search in this text. This has the disadvantage of only finding continuous buffers using simple storage mechanisms, but is quick to execute.
 
 \subsubsection{Carving memory}
+To find other types of resources a simple file carving was attempted using %TODO: name of tool(scappy?) Check anti-forensics repo
+with matches for the following file types:
+\begin{itemize}
+	\item PNG
+	\item JPG
+	\item TIFF
+\end{itemize}
+%TODO: Put results of carving in results!
 
 \subsection{What were we looking for}
 \lipsum[7]
