@@ -2,10 +2,24 @@
 %\lipsum[1-2in
 In this section we explore our findings, what we expect to find, what we did find and other information we found. 
 
-\section{Results from generic search terms}
+\subsection{Results from generic search terms}
+When searching for generic information and structures, some structured information was found. This included json when searching for '\{' and http requests when searching for 'http://'.
+
+A search for coordinates matching the following RegEx '60\.[0-9]*,10\.[0-9]*' was performed, which corresponds to the area the phone was located. Matches for a location in Google Maps was returned with the street address. This was from a search performed in the Google Maps application during the preparation. Searching for part of the address string revealed the address at different stages of completion.
 
 
-\section{Results from specific key phrases}
-\section*{Other unexpected results}
+\subsection{Results from specific key phrases}
+The passwords and usernames from table \ref{tbl:credentials} was used to detect the presence of credentials. Results are in the following table \ref{tbl:results} %TODO
 
-\section{•}
+For finding information related to Facebook, a case-insensitive search for the string Facebook was performed. This revealed information about friends of the logged in user, metadata of other users profile pictures was found from the Facebook application along with chat messages from Facebook Messenger. Information regarding whether the contact was muted, timestamp of last delivery and timestamp of last confirmed received message by the other participant.
+
+\subsection{Carved images}
+When carving several images were recovered. Most of these where part of stock Android OS or part of an applications assets, however when matching JPEG images, several of the pictures taken by the camera was discovered. These had no metadata. A overview of what was returned from each application can be found below:
+\begin{description}
+\item[Camera]\hfill\\
+The full scale image was only available for a short duration after use before being stored on the device, however a small scale preview from the select image screen or camera was still in memory.
+\item[WhatsApp]\hfill\\
+No images could be recovered, however a reference to a file name of the image could be found in the chat conversation from memory suggesting it is stored on the device.
+\item[Snapchat]\hfill\\
+The full scale image was only available for a short duration after use. After some time part of the memory region containing the image was overwritten by a sequence of 0 bits before finally being removed entirely, however a small scale preview from the select image screen or camera was still in memory.
+\end{description}
