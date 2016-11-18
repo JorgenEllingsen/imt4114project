@@ -1,7 +1,22 @@
 \section{Practical Application}
-\lipsum[1-2]
-\subsection{Labratory Environment}
-\lipsum[4-5]
+%\lipsum[1-2]
+We wanted to find remaining traces in memory from communication data and application metadata. For this we used the phone Sony Xperia M2 with Android 5.1.1.
+
+\subsection{Laboratory Environment}
+The phone was factory reset to ensure a reproducible result. At this point the phone was rooted %TODO: Explain term
+using the KingRoot application version 4.9.5. This process did not require restart of the phone, potentially leaving traces of memory from before rooting and making it ideal for memory forensics provided the phone can be unlocked regardless of root status. After testing the root, the phone was restarted to ensure a consistent state. As part of this process ADB USB debugging was enabled.
+
+Several applications was installed for testing. The applications installed were:
+\begin{description}
+\item[Facebook]
+\item[Facebook Messenger]
+\item[Snapchat]
+\item[WhatsApp]
+\item[Jodle]
+\item[Google Apps] \hfill\\Preinstalled on the phone, including GMail, Maps and Chrome
+\end{description}
+Since this was performed after rooting of the phone, testing of remains in memory when rooting was impossible.
+
 \subsection{What did we do}
 \lipsum[6]
 
