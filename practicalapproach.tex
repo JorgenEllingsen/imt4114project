@@ -4,7 +4,8 @@ We wanted to find remaining traces in memory from communication data and applica
 
 \subsection{Laboratory Environment}
 The phone was factory reset to ensure a reproducible result. At this point the phone was rooted %TODO: Explain term
-using the KingRoot application version 4.9.5. This process did not require restart of the phone, potentially leaving traces of memory from before rooting and making it ideal for memory forensics provided the phone can be unlocked regardless of root status. After testing the root, the phone was restarted to ensure a consistent state. As part of this process ADB USB debugging was enabled.
+using the KingRoot application version 4.9.5. This process did not require restart of the phone, potentially leaving traces of memory from before rooting and making it ideal for memory forensics provided the phone can be unlocked regardless of root status. After testing the root, the phone was restarted to ensure a consistent state. As part of this process ADB USB debugging was enabled. In addition we installed a memory cleaning app which promised \textbf{INGRID: to wipe the memory, xy.z}
+We used this tool because we wanted to check if data could survive a cleaningtool. Since we couldn't test over longer periods of time, and since the phone had very low memory\textbf{TTL memory, JP}, we used a cleaningtool to provide a more realistic environment with lot of use. 
 
 Several applications was installed for testing. The applications installed were:
 \begin{description}
@@ -22,7 +23,7 @@ Github was accessed using the Chrome browser.
 %\begin{description}
 %\item[GitHub]
 %\end{description}
-
+\subsubsection*{Approach for each application}
 \subsection{Process} %TODO: Bedre navn
 This section outlines the steps used for preparing the services and applications for memory forensics.
 
@@ -86,6 +87,8 @@ In addition to the data listed, credentials as stored by the application is pres
 
 % Strings used
 % Use of graphic images
+
+
 
 \subsubsection{Extracting memory}
 To extract the memory AMExtract was chosen. %TODO: REF
