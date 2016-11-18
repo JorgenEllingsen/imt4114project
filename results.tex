@@ -11,7 +11,10 @@ A search for coordinates matching the following RegEx '60\.[0-9]*,10\.[0-9]*' wa
 \subsection{Results from specific key phrases}
 The passwords and usernames from table \ref{tbl:credentials} was used to detect the presence of credentials. Results are in the following table \ref{tbl:results} %TODO
 
-For finding information related to Facebook, a case-insensitive search for the string Facebook was performed. This revealed information about friends of the logged in user, metadata of other users profile pictures was found from the Facebook application along with chat messages from Facebook Messenger. Information regarding whether the contact was muted, timestamp of last delivery and timestamp of last confirmed received message by the other participant.
+For finding information related to Facebook, a case-insensitive search for the string Facebook was performed. This revealed information about friends of the logged in user, metadata of other users profile pictures was found from the Facebook application along with chat messages from Facebook Messenger. Information regarding whether the contact was muted, timestamp of last delivery and timestamp of last confirmed received message by the other participant. Searching for the name of the participants could identify the chat messages, since all the messages had metadata containing name of the other party.
+
+For GMail and e-mail messages, the content and metadata was often found in the memory dump. As such the messages could be found by searching for the e-mail address.
+%For the applications which has been provided with a unique string
 
 \subsection{Carved images}
 When carving several images were recovered. Most of these where part of stock Android OS or part of an applications assets, however when matching JPEG images, several of the pictures taken by the camera was discovered. These had no metadata. A overview of what was returned from each application can be found below:
