@@ -17,19 +17,85 @@ Several applications was installed for testing. The applications installed were:
 \end{description}
 Since this was performed after rooting of the phone, testing of remains in memory when rooting was impossible.
 
-\subsection{What did we do}
-\lipsum[6]
+Github was accessed using the Chrome browser.
+%Some services were accessed using the Chrome browser:
+%\begin{description}
+%\item[GitHub]
+%\end{description}
+
+\subsection{Process} %TODO: Bedre navn
+This section outlines the steps used for preparing the services and applications for memory forensics.
+
+\subsubsection{Creation of credentials}
+We created user accounts corresponding to individual applications. A full list is below.\\
+\begin{table}
+\begin{tabular}{l|l|l}
+Service & User Name & Password \\ 
+\hline 
+Facebook & mis2016forensics@gmail.com & hackmyphone01 \\ 
+Snapchat & canuhackmyphone & hackmyphone07 \\ 
+WhatsApp & [Phone number] & - \\ 
+Google & mis2016forensics@gmail.com & hackmyphone \\ 
+Github & canuHackmyphone & hackmyphone06 \\ 
+\end{tabular} 
+\caption{Credentials used}
+\label{tbl:credentials}
+\end{table}
+
+The credentials for whatsapp has been removed from the list, however a normal phone number was used, together with a password.
+
+After creation of the accounts in the applications, the account was used to authenticate with the applications.
+% Create User accounts
+% Log in to user accounts
+
+\subsubsection{Creating searchable data}
+In each of the applications, a normal session was fabricated with easily searchable data.
+The types of data used for each application is specified below:
+\begin{description}
+\item[Facebook] \hfill\\
+Information about user and friends.
+\item[Facebook messenger]\hfill\\
+Unique random strings and images from camera taken in application.
+\item[Snapchat]\hfill\\
+Images from camera taken in application.
+\item[WhatsApp]\hfill\\
+Unique strings and images from camera taken in application.
+\item[GMail]\hfill\\
+Unique random strings and images from camera taken in application.
+\item[Google Chrome]\hfill\\
+Credentials to GitHub. Web history.
+\item[Google Maps]\hfill\\
+GPS data, locations and route between locations.
+\end{description}
+In addition to the data listed, credentials as stored by the application is present.
+
+\begin{figure}[h]
+\centering
+ \begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\textwidth]{figures/messenger_string}
+\caption{Messenger}
+\end{subfigure}
+ \begin{subfigure}[b]{0.2\textwidth}
+\includegraphics[width=\textwidth]{figures/random_string_in_gmail}
+\caption{GMail}
+\end{subfigure}
+\caption{Example of string used}
+\end{figure}
+% Send messages using the apps
+% Receive messages
+
+% Strings used
+% Use of graphic images
 
 \subsubsection{Extracting memory}
 To extract the memory AMExtract was chosen. %TODO: REF
- It did not have a profile for the phone %TODO: name
- , so a profile for extraction method, size of %TODO: name of buffer
+ It did not have a profile for the phone, so a profile for extraction method, size of %TODO: name of buffer
  and other properties was created and tested.
  
  The tool was then compiled using the ndk-build tool. As part of the linux kernel headers has been modified, one of the types had to be redefined using an older header file.
 
 \subsubsection{Searching memory}
-The extracted memory was searched using the strings which was previously entered. For this purpose the 'strings' tool was used to extract continuous regions of ASCII text and 'grep' was used to search in this text. This has the disadvantage of only finding continuous buffers using simple storage mechanisms, but is quick to execute.
+The extracted memory was searched using the credentials from table\ref{tbl:credentials} and strings which was previously entered. For this purpose the 'strings' tool was used to extract continuous regions of ASCII text and 'grep' was used to search in this text. This has the disadvantage of only finding continuous buffers using simple storage mechanisms, but is quick to execute.
 
 \subsubsection{Carving memory}
 To find other types of resources a simple file carving was attempted using %TODO: name of tool(scappy?) Check anti-forensics repo
