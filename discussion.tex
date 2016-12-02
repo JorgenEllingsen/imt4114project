@@ -1,15 +1,38 @@
 \section{Discussion}
-\lipsum[1-2]
-TODO
-\begin{verbatim}
-Rooted without rebooting
+%Rooted without rebooting
+%Unallocated data, and partially overwritten
+%Limitations
+%Full access to the phone
+%Phone memory size
+%Timeframe
+%1GB memory, 800MB dump
+%Writeblock
+%Kingroot - what does it do?
+%Forensic process
+Rooted without rebooting - In our experiment we tried two different rooting methods. One with help of a computer and a program called Odin. This method forced us to reboot the device and lose the memory. The second method was using an application called KingRoot. This application gave us root action over the phone shortly after installation. It did not need any external help to get root access.
+
 Unallocated data, and partially overwritten
+
 Limitations
+
 Full access to the phone
+
 Phone memory size
-Timeframe
-1GB memory, 800MB dump
-Writeblock
-Kingroot - what does it do?
-Forensic process
-\end{verbatim}
+
+Timeframe – The project had a stri
+
+1GB memory, 800MB dump – The mobile had 1 GB memory, but we were able to only dump 800 MB of it. This means that some of the memory are either locked or unavable for dumping due to the operation system or other locked memory information.
+
+Writeblock – Was used to prevent overwriting important data from the RAM. If there were any possibility for overwriting the data, that could compremise the essensial information in the case and could easly be dismissed in a court of law.
+
+The collection phase consists of retrieving data from the device (or devices) that are brought in by the investigators[?]. Brezinski and Killalea[?] suggests evidence collection to be done in an order of volatility. In the case of a mobile device, the RAM should therefore be collected before the primary storage. This is done by copying data over to another system from the mobile device. While a regular copy may cause the system to overwrite existing data, write-blockers are used in order to deny the system anything other than read access, which makes a copy doable without interfering with the existing content on the device. A hash of both the copied device and the copy itself is then created, and compared so that it is no doubt that the content of the copy matches the original device[?].This is done in order to keep the integrity of the actual system, while investigators can work on the copy of it
+
+Kingroot – What does it do? - KingRoot is a tool used to gain root control on a mobilephone with a system exploit. KingRoot APK will not trip the Samsung KNOX and have the ability to close Sony\_RIC perfectly. Rumours says that KingRoot may interfere with the android OS, but there were no changes to be found except root access.
+
+No real test data – Throughout the testing of the data retrieved from dumping, all the information that was gathered had been created by us.
+
+Forensic Process
+
+In this project the rooting of the phone and dumping the memory was done as an real forensic case would have done. First of all the phone was not turned off while it was rooted in case there was any
+
+sensetive data in the memory as real case would have done.
