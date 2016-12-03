@@ -5,7 +5,6 @@ We wanted to find remaining traces in memory from communication data and applica
 \subsection{Laboratory Environment}
 The phone was factory reset to ensure a reproducible result. At this point the phone was rooted using the KingRoot application version 4.9.5. This process did not require restart of the phone, potentially leaving traces of memory from before rooting and making it ideal for memory forensics provided the phone can be unlocked regardless of root status. After testing the root, the phone was restarted to ensure a consistent state. As part of this process ADB USB debugging was enabled. A memory cleaning app 'Clean Master'(version 5.14.4) was installed which claimed to remove temporary files and free memory.\\\\ %TODO: Write about usafe of this application in the appropriate sections
 We used this tool because we wanted to check if data could survive a cleaning tool. Since we could not test over longer periods of time, and since the phone had very low memory, we used a cleaning tool to mimic an environment for safety conscious users. Based on what discussed in the section \ref{background} about phone memory, it would be possible to get more data from the memory dump with a phone with more memory space than 1GB. The average phone today have around 4GB of memory and would possibly provide us with more data and more data over a longer time period.\\\\Several applications was installed for testing. The applications installed were:
-\begin{description}
 \begin{itemize}
 \item{Facebook (version 26.0.0.22.16)}
 \item{Facebook Messenger (version 93.0.0.14.69)}
@@ -19,7 +18,6 @@ We used this tool because we wanted to check if data could survive a cleaning to
 \item{Google Chrome (version 54.0.2840.68)}
 \end{itemize}
 \end{itemize}
-\end{description}
 Since this was performed after rooting of the phone, testing of remains in memory when rooting was impossible. Github was accessed using the Chrome browser.
 %Some services were accessed using the Chrome browser:
 %\begin{description}
@@ -53,6 +51,7 @@ After creation of the accounts in the applications, the account was used to auth
 \subsubsection{Creating searchable data}
 In each of the applications, a normal session was fabricated with easily searchable data.
 The types of data used for each application is specified below:
+%
 \begin{description}
 \item[Facebook] \hfill\\
 Information about user and friends.
@@ -131,7 +130,7 @@ The extracted memory was searched using the credentials from table\ref{tbl:crede
 \subsubsection{Carving memory}
 To find other types of resources a simple file carving was attempted using 'scalpel' with matches for the following file types:
 \begin{itemize}
-	\item PNG
-	\item JPG
-	\item TIFF
+	\item{PNG}
+	\item{JPG}
+	\item{TIFF}
 \end{itemize}
