@@ -4,19 +4,27 @@ In this section we explore our findings, what we expect to find, what we did fin
 \subsection{Results from generic search terms}
 When searching for generic information and structures, some structured information was found. This included JSON when searching for '\{' and http requests when searching for 'http://'.
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \label{genericS_table}
 \begin{tabular}{|m{2.5cm}|m{2cm}|m{2.5cm}|}
 \hline
 Search phrase & Description & Findings \\
 \hline
-http:// & Attempting to find web related data  & facebook \\
+http:// & Attempting to find web related data  & Traces of communication and general use. Most specific information was facebook communication requests with names. \\
 \hline
 '60\textbackslash.[0-9]*,10\textbackslash.[0-9] *' &  RegEx for GPS coordinates in the area & Our specific location, as well as the location of our search target \\
 \hline
+password & A generic search for string "password" & Found passwords saved in browser, specified in table \ref{spesificS_table}. \\
+\hline
 '\{\}' & Generic JSON search & Complete facebook information of correspondents: messages, user names and IDs, full profile pictures\\
-\hline    
+\hline  
+wifi & Generic search for wifi connections & Connection details including SSIDs \\  
+\hline
+fbpushnotif & String used in Facebook push notifications & List of notifications sent to the phone.\\
+\hline
+facebook: & String used in facebook activity & Messages, their participants and other activity. Lots of JSON data.\\
+\hline
 \end{tabular}
 \caption{Table of generic searches and findings}
 \end{table}
@@ -25,11 +33,35 @@ A search for coordinates matching the shown regular expression was performed, wh
 
 
 \subsection{Results from specific key phrases}
-The passwords and usernames from table \ref{tbl:credentials} was used to detect the presence of credentials. Results are in the following table \ref{spesificS_table} %TODO
+The passwords and usernames from table \ref{tbl:credentials} was used to detect the presence of credentials. Results are in the following table \ref{spesificS_table}. Some applications are not included due to not having any credentials, such as Jodle and Google Maps.
+
+\begin{table}[h]
+\centering
+\label{spesificS_table}
+\begin{tabular}{|m{2.5cm}|m{2.5cm}|m{2.5cm}|}
+\hline
+App & Description & Findings \\
+\hline
+Facebook and Messenger & Username and password & Found username.  \\
+\hline
+Snapchat & Username and password & Found nothing. \\
+\hline
+WhatsApp & Phone number & Found phone number. \\
+\hline 
+Google (Gmail) & Email and password & Found email.\\
+\hline
+Google Chrome (GitHub password saved in browser) & Username and password. & Found username and password \\
+\hline
+Wifi & Wifi name and password & Found name. Found password but without context.\\  
+\hline
+SSID & Searched for wifi names the device had been around & Found SSID of discovered networks, but not much context.  \\  
+\hline
+\end{tabular}
+\caption{Table of searches and findings (credentials)}
+\end{table}
 
 
-
-For finding information related to Facebook, a case-insensitive search for the string Facebook was performed. This revealed information about friends of the logged in user, metadata of other users profile pictures was found from the Facebook application along with chat messages from Facebook Messenger. Information regarding whether the contact was muted, timestamp of last delivery and timestamp of last confirmed received message by the other participant. Searching for the name of the participants could identify the chat messages, since all the messages had metadata containing name of the other party.
+For finding information related to Facebook, a case-insensitive search for the string Facebook was performed. This revealed information about friends of the logged in user, metadata of other users profile pictures was found from the Facebook application along with chat messages from Facebook Messenger. Information regarding whether the contact was muted, timestamp of last delivery and timestamp of last confirmed received message by the other participant. Searching for the name of the participants could identify the chat messages, since all the messages had metadata containing name of the other party.\\
 
 For GMail and e-mail messages, the content and metadata was often found in the memory dump. As such the messages could be found by searching for the e-mail address.
 %For the applications which has been provided with a unique string
