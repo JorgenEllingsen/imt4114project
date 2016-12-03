@@ -31,10 +31,10 @@ When searching for generic information and structures, some structured informati
 
 A search for coordinates matching the shown regular expression was performed, which corresponds to the area the phone was located. Matches for a location in Google Maps was returned with the street address. This was from a search performed in the Google Maps application during the preparation. Searching for part of the address string revealed the address at different stages of completion.
 
-A list of generic search terms can be found in table \ref{genericS_table}.
+The findings from generic search terms can be found in table \ref{genericS_table}.
 
 \subsection{Results from specific key phrases}
-The passwords and usernames from table \ref{tbl:credentials} was used to detect the presence of credentials. Results are in the following table \ref{spesificS_table}. Some applications are not included due to not having any credentials, such as Jodle and Google Maps.
+The passwords and usernames from table \ref{tbl:credentials} was used to detect the presence of credentials. Results are in the following table \ref{spesificS_table}. Some applications are not included due to not having any credentials, such as Jodel and Google Maps.
 
 \begin{table}[h]
 \centering
@@ -52,7 +52,7 @@ Google (Gmail) & Email and password & Found email.\\
 \hline
 Google Chrome (GitHub password saved in browser) & Username and password. & Found username and password \\
 \hline
-Wifi & Wifi name and password & Found name. Found password but without context.\\  
+Wifi & Wifi name and password & Found name. Found password but without context to relate them.\\  
 \hline
 SSID & Searched for wifi names the device had been around & Found SSID of discovered networks, but not much context.  \\  
 \hline
@@ -75,5 +75,5 @@ The full scale image was only available for a short duration after use before be
 \item[WhatsApp]\hfill\\
 No images could be recovered, however a reference to a file name of the image could be found in the chat conversation from memory suggesting it is stored on the device.
 \item[Snapchat]\hfill\\
-The full scale image was only available for a short duration after use. After some time part of the memory region containing the image was overwritten by a sequence of 0 bits before finally being removed entirely, however a small scale preview from the select image screen or camera was still in memory.
+The full scale image was only available for a short duration after use. After some time part of the memory region containing the image was overwritten by a sequence of zeroes before finally being removed entirely, however a small scale preview from the select image screen or camera was still in memory.
 \end{description}
