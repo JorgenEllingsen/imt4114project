@@ -94,11 +94,36 @@ In addition to the data listed, credentials as stored by the application is pres
 
 
 \subsubsection{Extracting memory}
-To extract the memory AMExtract was chosen. %TODO: REF
- It did not have a profile for the phone, so a profile for extraction method, size of %TODO: name of buffer
- and other properties was created and tested.
+To extract the memory AMExtract\cite{yang2016tool} was chosen.
+ It did not have a profile for the phone, so a profile for extraction method, size of the memory page structure and memory model was created and tested. It was determined that the phone had a 32 byte memory page structure, which Yang\cite{yang2016tool} claims is a typical size. The memory model was flat, which meant that it was contiguous making it simpler to copy.
  
- The tool was then compiled using the ndk-build tool. As part of the linux kernel headers has been modified, one of the types had to be redefined using an older header file.
+ The tool was then compiled using the ndk-build tool which is part of the Android SDK. The local kernel headers on the machine used to compile was different from the ones used in the AMExtract and thus a definition for the data type had to be added from an older version of the header file.
+ 
+ The phone was then connected using ADB and the AMExtract binary for the CPU architecture of the phone(armeabi-v7a), was copied to the phone using 'adb push'. The binary was pushed to the /data/local/tmp/ directory. A shell session was then initiated using adb shell. Inside the shell the following commands were executed to elevate privileges and test AMExtractor:
+ \begin{lstlisting}[language=bash]
+# su
+# cd /data/local/tmp/
+# chmod 755 ./AMExtract
+# ./AMExtrator
+# dmesg | tail
+ \end{lstlisting}
+ In the kernel log a few entries had been added by AMExtractor indicating success.
+ 
+ Next the memory dump was prepared using:
+  \begin{lstlisting}[language=bash]
+# ./AMExtrator -d
+ \end{lstlisting}
+ 
+AMExtractor dumps the memory to a port on localhost. To get the dump off the phone the port was forwarded over ADB with 
+ \begin{lstlisting}[language=bash]
+# adb forward tcp:31415 tcp:31415
+ \end{lstlisting}
+Next the memory dump was started with
+ \begin{lstlisting}[language=bash]
+# nc 127.0.0.1 31415 > dump
+  \end{lstlisting}
+
+After the memory dump had been performed, the file size was checked to ensure it matched the memory size of the phone.
 
 \subsubsection{Searching memory}
 The extracted memory was searched using the credentials from table\ref{tbl:credentials} and strings which was previously entered. For this purpose the 'strings' tool was used to extract continuous regions of ASCII text and 'grep' was used to search in this text. This has the disadvantage of only finding continuous buffers using simple storage mechanisms, but is quick to execute.
