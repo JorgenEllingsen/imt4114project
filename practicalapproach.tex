@@ -6,7 +6,7 @@ We wanted to find remaining traces in memory from communication data and applica
 The phone was factory reset to ensure a reproducible result. At this point the phone was rooted %TODO: Explain term
 using the KingRoot application version 4.9.5. This process did not require restart of the phone, potentially leaving traces of memory from before rooting and making it ideal for memory forensics provided the phone can be unlocked regardless of root status. After testing the root, the phone was restarted to ensure a consistent state. As part of this process ADB USB debugging was enabled. A memory cleaning app 'Clean Master'(version 5.14.4) was installed which claimed to remove temporary files and free memory.\\\\ %TODO: Write about usafe of this application in the appropriate sections
 
-We used this tool because we wanted to check if data could survive a cleaning tool. Since we couldn't test over longer periods of time, and since the phone had very low memory\textbf{TTL memory, JP}, we used a cleaningtool to provide a more realistic environment with lot of use. 
+We used this tool because we wanted to check if data could survive a cleaning tool. Since we could not test over longer periods of time, and since the phone had very low memory, we used a cleaning tool to mimmic an environment for safety concious users. Based on what discussed in the section \ref{background} about phone memory, it would be possible to get more data from the memory dump with a phone with more memory space than 1GB. The average phone today have around 4gb of memory and would possibly provide us with more data and more data over a longer period of time.\\\\
 
 Several applications was installed for testing. The applications installed were:
 \begin{description}
@@ -94,11 +94,36 @@ In addition to the data listed, credentials as stored by the application is pres
 
 
 \subsubsection{Extracting memory}
-To extract the memory AMExtract was chosen. %TODO: REF
- It did not have a profile for the phone, so a profile for extraction method, size of %TODO: name of buffer
- and other properties was created and tested.
+To extract the memory AMExtract\cite{yang2016tool} was chosen.
+ It did not have a profile for the phone, so a profile for extraction method, size of the memory page structure and memory model was created and tested. It was determined that the phone had a 32 byte memory page structure, which Yang\cite{yang2016tool} claims is a typical size. The memory model was flat, which meant that it was contiguous making it simpler to copy.
  
- The tool was then compiled using the ndk-build tool. As part of the linux kernel headers has been modified, one of the types had to be redefined using an older header file.
+ The tool was then compiled using the ndk-build tool which is part of the Android SDK. The local kernel headers on the machine used to compile was different from the ones used in the AMExtract and thus a definition for the data type had to be added from an older version of the header file.
+ 
+ The phone was then connected using ADB and the AMExtract binary for the CPU architecture of the phone(armeabi-v7a), was copied to the phone using 'adb push'. The binary was pushed to the /data/local/tmp/ directory. A shell session was then initiated using adb shell. Inside the shell the following commands were executed to elevate privileges and test AMExtractor:
+ \begin{lstlisting}[language=bash]
+# su
+# cd /data/local/tmp/
+# chmod 755 ./AMExtract
+# ./AMExtrator
+# dmesg | tail
+ \end{lstlisting}
+ In the kernel log a few entries had been added by AMExtractor indicating success.
+ 
+ Next the memory dump was prepared using:
+  \begin{lstlisting}[language=bash]
+# ./AMExtrator -d
+ \end{lstlisting}
+ 
+AMExtractor dumps the memory to a port on localhost. To get the dump off the phone the port was forwarded over ADB with 
+ \begin{lstlisting}[language=bash]
+# adb forward tcp:31415 tcp:31415
+ \end{lstlisting}
+Next the memory dump was started with
+ \begin{lstlisting}[language=bash]
+# nc 127.0.0.1 31415 > dump
+  \end{lstlisting}
+
+After the memory dump had been performed, the file size was checked to ensure it matched the memory size of the phone.
 
 \subsubsection{Searching memory}
 The extracted memory was searched using the credentials from table\ref{tbl:credentials} and strings which was previously entered. For this purpose the 'strings' tool was used to extract continuous regions of ASCII text and 'grep' was used to search in this text. This has the disadvantage of only finding continuous buffers using simple storage mechanisms, but is quick to execute.
@@ -110,6 +135,19 @@ To find other types of resources a simple file carving was attempted using 'scal
 	\item JPG
 	\item TIFF
 \end{itemize}
+
+The following signatures were used:
+\begin{lstlisting}
+gif                       y    2500000    \x47\x49\x46\x38\x37\x61    \x00\x3b
+gif                       y    2500000    \x47\x49\x46\x38\x39\x61    \x00\x00\x3b
+jpg                       y    2500000    \xff\xd8\xff\xe0\x00\x10    \xff\xd9
+jpg                       y    2500000    \xff\xd8\xff\xe1                \xff\xd9 
+bmp                       y    2500000    BM??\x00\x00\x00
+tif                       y    2500000    \x49\x49\x2a\x00
+tif                       y    2500000    \x4D\x4D\x00\x2A
+PNG                       y    2500000    \x88\x9a\x0d\x12
+PNG                       y    2500000    \x89\x50\x4e\x47\x0d\x0a\x1a\x0a
+\end{lstlisting}
 
 \subsection{What were we looking for}
 \lipsum[7]

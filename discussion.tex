@@ -9,30 +9,17 @@
 %Writeblock
 %Kingroot - what does it do?
 %Forensic process
-Rooted without rebooting - In our experiment we tried two different rooting methods. One with help of a computer and a program called Odin. This method forced us to reboot the device and lose the memory. The second method was using an application called KingRoot. This application gave us root action over the phone shortly after installation. It did not need any external help to get root access.
-
-Unallocated data, and partially overwritten
-
-Limitations
-
-Full access to the phone
-
-Phone memory size
-
-Timeframe – The project had a stri
-
-1GB memory, 800MB dump – The mobile had 1 GB memory, but we were able to only dump 800 MB of it. This means that some of the memory are either locked or unavable for dumping due to the operation system or other locked memory information.
-
-Writeblock – Was used to prevent overwriting important data from the RAM. If there were any possibility for overwriting the data, that could compremise the essensial information in the case and could easly be dismissed in a court of law.
-
-The collection phase consists of retrieving data from the device (or devices) that are brought in by the investigators[?]. Brezinski and Killalea[?] suggests evidence collection to be done in an order of volatility. In the case of a mobile device, the RAM should therefore be collected before the primary storage. This is done by copying data over to another system from the mobile device. While a regular copy may cause the system to overwrite existing data, write-blockers are used in order to deny the system anything other than read access, which makes a copy doable without interfering with the existing content on the device. A hash of both the copied device and the copy itself is then created, and compared so that it is no doubt that the content of the copy matches the original device[?].This is done in order to keep the integrity of the actual system, while investigators can work on the copy of it
-
-Kingroot – What does it do? - KingRoot is a tool used to gain root control on a mobilephone with a system exploit. KingRoot APK will not trip the Samsung KNOX and have the ability to close Sony\_RIC perfectly. Rumours says that KingRoot may interfere with the android OS, but there were no changes to be found except root access.
-
-No real test data – Throughout the testing of the data retrieved from dumping, all the information that was gathered had been created by us.
-
-Forensic Process
-
-In this project the rooting of the phone and dumping the memory was done as an real forensic case would have done. First of all the phone was not turned off while it was rooted in case there was any
-
-sensetive data in the memory as real case would have done.
+To perform the memory dump, a preliminary research was initiated to discover tools compatible with the smartphone's software; where the criterias were: easy to perform, and minimal alteration of memory. Two different tools were encountered, namely Odin and KingRoot. Both ensure that the phone is rooted, which enable memory dump functionality.
+It was unfortunately discovered that Odin was not up to the task, it required: an application to be installed on a computer, connect to it with USB, and a reboot of the phone was required. Because it requires a reboot, any memory content is gone, and is therefore not forensically sound for an investigation. On the other hand, KingRoot granted root access without rebooting and is therefore preferred. However, it is not recommended to use KingRoot in a real forensics case, due to the fact that the application alters the memory in a unpredictable manner. Reasong being that the application is proprietary technology, thus problematic to review the implementation. Consequently, if this research was to be done in a more forensics setting, different methods or tools should be considered. 
+\subsection{Unallocated data, and partially overwritten}
+During the forensics process the different applications was used to gather information we were examining in the data dump. This lead to overwrite old memory done by the garbage collector in the android system. The result was partly overwritten images the was nearly unidentifiable after the data dump. Reason for this is that the gargabe collection focuses mainly on size and collition when writing new memory. Consequently if we had a phone with more memory, we could probably dumped a bigger amount of data.
+\subsection{Limitations}
+One of the limitations of this research study was the timeframe. Since we had limited with time for testing we were unable to check if some of the data was stored in the memory for a longer period than expected. 
+\\\\
+While the phone had 1 GB memory we were only able to dump 800 MB of it. This could potenially mean that there are no mapping directly between the virtual memory and the physical memory. Therefore unable to access or retrieve this information. 
+\\\\
+Throughout dumping of the data we did not use any type of writeblocker. As a result there could be data from our dumping that is comprimised from connecting the mobile phone to an external device such as the computer we used for memory dumping. This means that we could have overwritten some of the RAM memory.
+\\\\
+Another limitation of the our research was the test data. There was no real data tested under the forensic phase. This means that we were unable to check for contancts, phone calls and finance information due to the possibility of compromising any of our personal data.
+\subsection{Forensic Process}
+The forensic phase did not go as planned. For instance there was not any writelockers used which would have made our data integrity trustable. During this process there was no specialized tool used other than the AMExtract. Therefore the information found and analyzed is based on the spesific and generic searches that was done by the group. With the use of a forensic speciallized tool would have given us the chance to find more interesting data. At the end of the forensic process we can not confirm that the phone used under the forensic process was not tampered with. Likelihood of the phone being tampered with is next to nothing.
