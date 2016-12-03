@@ -5,17 +5,19 @@ We wanted to find remaining traces in memory from communication data and applica
 \subsection{Laboratory Environment}
 The phone was factory reset to ensure a reproducible result. At this point the phone was rooted %TODO: Explain term
 using the KingRoot application version 4.9.5. This process did not require restart of the phone, potentially leaving traces of memory from before rooting and making it ideal for memory forensics provided the phone can be unlocked regardless of root status. After testing the root, the phone was restarted to ensure a consistent state. As part of this process ADB USB debugging was enabled. A memory cleaning app 'Clean Master'(version 5.14.4) was installed which claimed to remove temporary files and free memory.\\\\ %TODO: Write about usafe of this application in the appropriate sections
-
-We used this tool because we wanted to check if data could survive a cleaning tool. Since we could not test over longer periods of time, and since the phone had very low memory, we used a cleaning tool to mimmic an environment for safety concious users. Based on what discussed in the section \ref{background} about phone memory, it would be possible to get more data from the memory dump with a phone with more memory space than 1GB. The average phone today have around 4gb of memory and would possibly provide us with more data and more data over a longer period of time.\\\\
-
-Several applications was installed for testing. The applications installed were:
+We used this tool because we wanted to check if data could survive a cleaning tool. Since we could not test over longer periods of time, and since the phone had very low memory, we used a cleaning tool to mimmic an environment for safety concious users. Based on what discussed in the section \ref{background} about phone memory, it would be possible to get more data from the memory dump with a phone with more memory space than 1GB. The average phone today have around 4gb of memory and would possibly provide us with more data and more data over a longer period of time.\\\\Several applications was installed for testing. The applications installed were:
 \begin{description}
-\item[Facebook]
-\item[Facebook Messenger]
-\item[Snapchat]
-\item[WhatsApp]
-\item[Jodel]
-\item[Google Apps] \hfill\\Preinstalled on the phone, including GMail, Maps and Chrome
+\begin{itemize}
+\item{Facebook}
+\item{Facebook Messenger}
+\item{Snapchat}
+\item{WhatsApp}
+\item{Jodel}
+\item{Google Apps}
+\begin{itemize}
+\item{Preinstalled on the phone, including GMail, Maps and Chrome}
+\end{itemize}
+\end{itemize}
 \end{description}
 Since this was performed after rooting of the phone, testing of remains in memory when rooting was impossible.
 
@@ -24,7 +26,7 @@ Github was accessed using the Chrome browser.
 %\begin{description}
 %\item[GitHub]
 %\end{description}
-\subsubsection*{Approach for each application}
+\subsubsection{Approach for each application}
 \subsection{Process} %TODO: Bedre navn
 This section outlines the steps used for preparing the services and applications for memory forensics.
 
@@ -135,19 +137,6 @@ To find other types of resources a simple file carving was attempted using 'scal
 	\item JPG
 	\item TIFF
 \end{itemize}
-
-The following signatures were used:
-\begin{lstlisting}
-gif                       y    2500000    \x47\x49\x46\x38\x37\x61    \x00\x3b
-gif                       y    2500000    \x47\x49\x46\x38\x39\x61    \x00\x00\x3b
-jpg                       y    2500000    \xff\xd8\xff\xe0\x00\x10    \xff\xd9
-jpg                       y    2500000    \xff\xd8\xff\xe1                \xff\xd9 
-bmp                       y    2500000    BM??\x00\x00\x00
-tif                       y    2500000    \x49\x49\x2a\x00
-tif                       y    2500000    \x4D\x4D\x00\x2A
-PNG                       y    2500000    \x88\x9a\x0d\x12
-PNG                       y    2500000    \x89\x50\x4e\x47\x0d\x0a\x1a\x0a
-\end{lstlisting}
 
 \subsection{What were we looking for}
 \lipsum[7]
