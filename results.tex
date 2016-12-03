@@ -1,13 +1,7 @@
 \section{Results}
-In this section we explore our findings, what we expect to find, what we did find and other information we found. 
-
-\subsection{Results from generic search terms}
-When searching for generic information and structures, some structured information was found. This included JSON when searching for '\{' and http requests when searching for 'http://'.
-
 \begin{table}[H]
 \centering
-\label{genericS_table}
-\begin{tabular}{|m{2.5cm}|m{2cm}|m{2.5cm}|}
+\begin{tabular}{|m{2cm}|m{2cm}|m{2.5cm}|}
 \hline
 Search phrase & Description & Findings \\
 \hline
@@ -27,10 +21,17 @@ facebook: & String used in facebook activity & Messages, their participants and 
 \hline
 \end{tabular}
 \caption{Table of generic searches and findings}
+\label{genericS_table}
 \end{table}
+
+In this section we explore our findings, what we expect to find, what we did find and other information we found. 
+
+\subsection{Results from generic search terms}
+When searching for generic information and structures, some structured information was found. This included JSON when searching for '\{' and http requests when searching for 'http://'.
 
 A search for coordinates matching the shown regular expression was performed, which corresponds to the area the phone was located. Matches for a location in Google Maps was returned with the street address. This was from a search performed in the Google Maps application during the preparation. Searching for part of the address string revealed the address at different stages of completion.
 
+A list of generic search terms can be found in table \ref{genericS_table}.
 
 \subsection{Results from specific key phrases}
 The passwords and usernames from table \ref{tbl:credentials} was used to detect the presence of credentials. Results are in the following table \ref{spesificS_table}. Some applications are not included due to not having any credentials, such as Jodle and Google Maps.
