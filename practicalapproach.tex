@@ -4,7 +4,7 @@ We wanted to find remaining traces in memory from communication data and applica
 
 \subsection{Laboratory Environment}
 The phone was factory reset to ensure a reproducible result. At this point the phone was rooted %TODO: Explain term
-using the KingRoot application version 4.9.5. This process did not require restart of the phone, potentially leaving traces of memory from before rooting and making it ideal for memory forensics provided the phone can be unlocked regardless of root status. After testing the root, the phone was restarted to ensure a consistent state. As part of this process ADB USB debugging was enabled. A memory cleaning app 'Clean Master'(version 5.14.4) was installed which claimed to remove temporary files and free memory. %TODO: Write about usafe of this application in the appropriate sections
+using the KingRoot application version 4.9.5. This process did not require restart of the phone, potentially leaving traces of memory from before rooting and making it ideal for memory forensics provided the phone can be unlocked regardless of root status. After testing the root, the phone was restarted to ensure a consistent state. As part of this process ADB USB debugging was enabled. A memory cleaning app 'Clean Master'(version 5.14.4) was installed which claimed to remove temporary files and free memory.\\\\ %TODO: Write about usafe of this application in the appropriate sections
 
 We used this tool because we wanted to check if data could survive a cleaning tool. Since we couldn't test over longer periods of time, and since the phone had very low memory\textbf{TTL memory, JP}, we used a cleaningtool to provide a more realistic environment with lot of use. 
 
@@ -14,7 +14,7 @@ Several applications was installed for testing. The applications installed were:
 \item[Facebook Messenger]
 \item[Snapchat]
 \item[WhatsApp]
-\item[Jodle]
+\item[Jodel]
 \item[Google Apps] \hfill\\Preinstalled on the phone, including GMail, Maps and Chrome
 \end{description}
 Since this was performed after rooting of the phone, testing of remains in memory when rooting was impossible.
@@ -68,6 +68,8 @@ Unique random strings and images from camera taken in application.
 Credentials to GitHub. Web history.
 \item[Google Maps]\hfill\\
 GPS data, locations and route between locations.
+\item[Jodel]\hfill\\
+Unique string and image from camera taken in application.
 \end{description}
 In addition to the data listed, credentials as stored by the application is present.
 
