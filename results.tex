@@ -1,15 +1,33 @@
 \section{Results}
-%\lipsum[1-2in
 In this section we explore our findings, what we expect to find, what we did find and other information we found. 
 
 \subsection{Results from generic search terms}
 When searching for generic information and structures, some structured information was found. This included JSON when searching for '\{' and http requests when searching for 'http://'.
 
-A search for coordinates matching the following RegEx '60\.[0-9]*,10\.[0-9]*' was performed, which corresponds to the area the phone was located. Matches for a location in Google Maps was returned with the street address. This was from a search performed in the Google Maps application during the preparation. Searching for part of the address string revealed the address at different stages of completion.
+\begin{table}[h]
+\centering
+\label{genericS_table}
+\begin{tabular}{|m{2.5cm}|m{2cm}|m{2.5cm}|}
+\hline
+Search phrase & Description & Findings \\
+\hline
+http:// & Attempting to find web related data  & facebook \\
+\hline
+'60\textbackslash.[0-9]*,10\textbackslash.[0-9] *' &  RegEx for GPS coordinates in the area & Our specific location, as well as the location of our search target \\
+\hline
+'\{\}' & Generic JSON search & Complete facebook information of correspondents: messages, user names and IDs, full profile pictures\\
+\hline    
+\end{tabular}
+\caption{Table of generic searches and findings}
+\end{table}
+
+A search for coordinates matching the shown regular expression was performed, which corresponds to the area the phone was located. Matches for a location in Google Maps was returned with the street address. This was from a search performed in the Google Maps application during the preparation. Searching for part of the address string revealed the address at different stages of completion.
 
 
 \subsection{Results from specific key phrases}
-The passwords and usernames from table \ref{tbl:credentials} was used to detect the presence of credentials. Results are in the following table \ref{tbl:results} %TODO
+The passwords and usernames from table \ref{tbl:credentials} was used to detect the presence of credentials. Results are in the following table \ref{spesificS_table} %TODO
+
+
 
 For finding information related to Facebook, a case-insensitive search for the string Facebook was performed. This revealed information about friends of the logged in user, metadata of other users profile pictures was found from the Facebook application along with chat messages from Facebook Messenger. Information regarding whether the contact was muted, timestamp of last delivery and timestamp of last confirmed received message by the other participant. Searching for the name of the participants could identify the chat messages, since all the messages had metadata containing name of the other party.
 
