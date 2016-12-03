@@ -136,5 +136,18 @@ To find other types of resources a simple file carving was attempted using 'scal
 	\item TIFF
 \end{itemize}
 
+The following signatures were used:
+\begin{lstlisting}
+gif                       y    2500000    \x47\x49\x46\x38\x37\x61    \x00\x3b
+gif                       y    2500000    \x47\x49\x46\x38\x39\x61    \x00\x00\x3b
+jpg                       y    2500000    \xff\xd8\xff\xe0\x00\x10    \xff\xd9
+jpg                       y    2500000    \xff\xd8\xff\xe1                \xff\xd9 
+bmp                       y    2500000    BM??\x00\x00\x00
+tif                       y    2500000    \x49\x49\x2a\x00
+tif                       y    2500000    \x4D\x4D\x00\x2A
+PNG                       y    2500000    \x88\x9a\x0d\x12
+PNG                       y    2500000    \x89\x50\x4e\x47\x0d\x0a\x1a\x0a
+\end{lstlisting}
+
 \subsection{What were we looking for}
 \lipsum[7]
