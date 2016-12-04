@@ -27,15 +27,12 @@ facebook: & String used in Facebook activity & Messages, their participants and 
 In this section we explore our findings, what we expect to find, what we did find and other information we found. 
 
 \subsection{Results from generic search terms}
-When searching for generic information and structures, some structured information was found. This included JSON when searching for '\{' and http requests when searching for 'http://'.
-
-A search for coordinates matching the shown regular expression was performed, which corresponds to the area the phone was located. Matches for a location in Google Maps was returned with the street address. This was from a search performed in the Google Maps application during the preparation. Searching for part of the address string revealed the address at different stages of completion.
-
+When searching for generic information and structures, some structured information was found. This included JSON when searching for '\{' and http requests when searching for 'http://'.\\\\
+A search for coordinates matching the shown regular expression was performed, which corresponds to the area the phone was located. Matches for a location in Google Maps was returned with the street address. This was from a search performed in the Google Maps application during the preparation. Searching for part of the address string revealed the address at different stages of completion.\\\\
 The findings from generic search terms can be found in table \ref{genericS_table}.
 
 \subsection{Results from specific key phrases}
-The passwords and usernames from table \ref{tbl:credentials} was used to detect the presence of credentials. Results are in the following table \ref{spesificS_table}. Some applications are not included due to not having any credentials, such as Jodel and Google Maps.
-
+The passwords and usernames from table \ref{tbl:credentials} was used to detect the presence of credentials. Results are in the following table \ref{spesificS_table}. Some applications are not included due to not having any credentials, such as Jodel and Google Maps.\\
 \begin{table}[h]
 \centering
 \begin{tabular}{|m{2.5cm}|m{2.5cm}|m{2.5cm}|}
@@ -60,10 +57,7 @@ SSID & Searched for wifi names the device had been around & Found SSID of discov
 \caption{Table of searches and findings (credentials)}
 \label{spesificS_table}
 \end{table}
-
-
-For finding information related to Facebook, a case-insensitive search for the string Facebook was performed. This revealed information about friends of the logged in user, metadata of other users profile pictures was found from the Facebook application along with chat messages from Facebook Messenger. Information regarding whether the contact was muted, timestamp of last delivery and timestamp of last confirmed received message by the other participant. Searching for the name of the participants could identify the chat messages, since all the messages had metadata containing name of the other party.\\
-
+\\For finding information related to Facebook, a case-insensitive search for the string Facebook was performed. This revealed information about friends of the logged in user, metadata of other users profile pictures was found from the Facebook application along with chat messages from Facebook Messenger. Information regarding whether the contact was muted, timestamp of last delivery and timestamp of last confirmed received message by the other participant. Searching for the name of the participants could identify the chat messages, since all the messages had metadata containing name of the other party.\\
 For GMail and e-mail messages, the content and metadata was often found in the memory dump. As such the messages could be found by searching for the e-mail address.
 %For the applications which has been provided with a unique string
 

@@ -93,12 +93,9 @@ In addition to the data listed, credentials as stored by the application is pres
 
 
 \subsubsection{Extracting memory}
-To extract the memory AMExtractor\cite{yang2016tool} was chosen.
- It did not have a profile for the phone, so a profile for extraction method, size of the memory page structure and memory model was created and tested. It was determined that the phone had a 32 byte memory page structure, which Yang\cite{yang2016tool} claims is a typical size. The memory model was flat, which meant that it was contiguous making it simpler to copy.
- 
- The tool was then compiled using the ndk-build tool which is part of the Android SDK. The local kernel headers on the machine used to compile was different from the ones used in the AMExtractor and thus a definition for the data type had to be added from an older version of the header file.
- 
- The phone was then connected using ADB and the AMExtractor binary for the CPU architecture of the phone(armeabi-v7a), was copied to the phone using 'adb push'. The binary was pushed to the /data/local/tmp/ directory. A shell session was then initiated using adb shell. Inside the shell the following commands were executed to elevate privileges and test AMExtractor:
+To extract the memory AMExtractor\cite{yang2016tool} was chosen. It did not have a profile for the phone, so a profile for extraction method, size of the memory page structure and memory model was created and tested. It was determined that the phone had a 32 byte memory page structure, which Yang\cite{yang2016tool} claims is a typical size. The memory model was flat, which meant that it was contiguous making it simpler to copy.\\\\
+The tool was then compiled using the ndk-build tool which is part of the Android SDK. The local kernel headers on the machine used to compile was different from the ones used in the AMExtractor and thus a definition for the data type had to be added from an older version of the header file.\\\\
+The phone was then connected using ADB and the AMExtractor binary for the CPU architecture of the phone(armeabi-v7a), was copied to the phone using 'adb push'. The binary was pushed to the /data/local/tmp/ directory. A shell session was then initiated using adb shell. Inside the shell the following commands were executed to elevate privileges and test AMExtractor:
  \begin{lstlisting}[language=bash]
 # su
 # cd /data/local/tmp/
