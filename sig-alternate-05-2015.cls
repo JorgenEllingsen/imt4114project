@@ -261,11 +261,11 @@
 \parskip 0pt plus 1pt            % Extra vertical space between
                                 % paragraphs.
 \ifnum\ACM@basesize=9\relax
-\parindent 9pt  % GM July 2000 / was 0pt - width of paragraph
+\parindent 0pt  % GM July 2000 / was 0pt - width of paragraph. was 9
                 % indentation.
 \fi
 \ifnum\ACM@basesize=10\relax
-\parindent 10pt  % GM July 2000 / was 0pt - width of paragraph
+\parindent 0pt  % GM July 2000 / was 0pt - width of paragraph. was 10
                 % indentation.
 \fi
 \partopsep 2pt plus 1pt minus 1pt% Extra vertical space, in addition to
